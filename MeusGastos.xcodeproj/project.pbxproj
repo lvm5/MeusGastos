@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F501D0832B728F8E009F25C6 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F501D0822B728F8E009F25C6 /* AddView.swift */; };
 		F50976302B728E5D001CDE61 /* MeusGastosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509762F2B728E5D001CDE61 /* MeusGastosApp.swift */; };
 		F50976322B728E5D001CDE61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50976312B728E5D001CDE61 /* ContentView.swift */; };
 		F50976342B728E60001CDE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50976332B728E60001CDE61 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F501D0822B728F8E009F25C6 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		F509762C2B728E5D001CDE61 /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F509762F2B728E5D001CDE61 /* MeusGastosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusGastosApp.swift; sourceTree = "<group>"; };
 		F50976312B728E5D001CDE61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				F509762F2B728E5D001CDE61 /* MeusGastosApp.swift */,
 				F50976312B728E5D001CDE61 /* ContentView.swift */,
+				F501D0822B728F8E009F25C6 /* AddView.swift */,
 				F50976332B728E60001CDE61 /* Assets.xcassets */,
 				F50976352B728E60001CDE61 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				F50976322B728E5D001CDE61 /* ContentView.swift in Sources */,
 				F50976302B728E5D001CDE61 /* MeusGastosApp.swift in Sources */,
+				F501D0832B728F8E009F25C6 /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

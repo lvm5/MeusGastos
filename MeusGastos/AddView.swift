@@ -1,18 +1,50 @@
 //
 //  AddView.swift
-//  MeusGastos
+//  iExpense
 //
-//  Created by Leandro Morais on 2024.02.06.
+//  Created by Paul Hudson on 16/10/2023.
 //
 
 import SwiftUI
 
 struct AddView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	@Environment(\.dismiss) var dismiss
+
+	@State private var name = ""
+	@State private var type = "Pessoal"
+	@State private var amount = 0.0
+
+	var expenses: Expenses
+
+	let types = ["Diversão", "Pessoal", "Trabalho", "Viagem", "Alimentação"]
+
+	var body: some View {
+		NavigationStack {
+			Form {
+				TextField("Nome", text: $name)
+
+				Picker("Tipo", selection: $type) {
+					ForEach(types, id: \.self) {
+						Text($0)
+					}
+				}
+//ORIGINAL CODE
+//				TextField("Total", value: $amount, format: .currency(code: Locale.current.currency? .identifier ?? "USD"))
+				TextField("Total", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+					.keyboardType(.decimalPad)
+			}
+			.navigationTitle("Adicionar despesa")
+			.toolbar {
+				Button("Salvar") {
+					let item = ExpenseItem(name: name, type: type, amount: amount)
+					expenses.items.append(item)
+					dismiss()
+				}
+			}
+		}
+	}
 }
 
 #Preview {
-    AddView()
+	AddView(expenses: Expenses())
 }
